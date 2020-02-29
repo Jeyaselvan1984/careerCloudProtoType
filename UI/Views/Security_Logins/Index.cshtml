@@ -1,0 +1,105 @@
+﻿@model IEnumerable<DAL.Security_Logins>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password_Update_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agreement_Accepted_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Locked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Inactive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Full_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Force_Change_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prefferred_Language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time_Stamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password_Update_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agreement_Accepted_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Locked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Inactive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Full_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Force_Change_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prefferred_Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time_Stamp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
